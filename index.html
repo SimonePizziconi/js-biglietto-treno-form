@@ -13,53 +13,53 @@
             <form action="#">
                 <div class="flex-container">
                     <div class="col-33">
-                        <h6>Nome Cognome</h6>
-                        <input class="user-name input-style" type="text">
+                        <h3>Nome Cognome</h3>
+                        <input id="user-name" class="input-style" type="text">
                     </div>
                     <div class="col-33">
-                        <h6>Km da percorrere</h6>
-                        <input class="kilometers input-style" type="number">
+                        <h3>Km da percorrere</h3>
+                        <input id="kilometers" class="input-style" type="number">
                     </div>
                     <div class="col-33">
-                        <h6>Fascia d'et&agrave;</h6>
-                        <select class="age-user input-style" name="" id="">
+                        <h3>Fascia d'et&agrave;</h3>
+                        <select class="input-style" name="" id="age-user">
                             <option value="Maggiorenne">Maggiorenne</option>
                             <option value="Minorenne">Minorenne</option>
                             <option value="Over 65">Over 65</option>
                         </select>
                     </div>
                     <div class="col">
-                        <button class="genera input-style button-style">GENERA</button>
-                        <button class="annulla input-style button-style">ANNULLA</button>
+                        <button id="send" class="input-style button-style">GENERA</button>
+                        <button id="cancel" class="input-style button-style">ANNULLA</button>
                     </div>
                 </div>
             </form>
         </div>
 
         <div class="ticket">
-            <div>
-                <h2>DETTAGLIO PASSEGGERI</h2>
+            <div class="ticket-flex-container">
                 <div class="ticket-name">
                     <h2>Nome Passeggero</h2>
                     <span id="name-pass"></span>
                 </div>
-            </div>
-            <div class="ticket-number">
-                <div class="col-25">
-                    <h5>Offerta</h5>
-                    <span id="type-ticket"></span>
-                </div>
-                <div class="col-25">
-                    <h5>Carrozza</h5>
-                    <span id="number-train"></span>
-                </div>
-                <div class="col-25">
-                    <h5>Codice CP</h5>
-                    <span id="ticket-code"></span>
-                </div>
-                <div class="col-25">
-                    <h5>Costo Biglietto</h5>
-                    <span id="price-ticket"></span>
+                <div class="ticket-number">
+                    <h2>Dettagli Biglietto</h2>
+                    <div class="col-25">
+                        <h3>Offerta</h3>
+                        <span id="type-ticket"></span>
+                    </div>
+                    <div class="col-25">
+                        <h3>Carrozza</h3>
+                        <span id="number-train"></span>
+                    </div>
+                    <div class="col-25">
+                        <h3>Codice CP</h3>
+                        <span id="ticket-code"></span>
+                    </div>
+                    <div class="col-25">
+                        <h3>Costo Biglietto</h3>
+                        <span id="price-ticket"></span>
+                    </div>
                 </div>
             </div>
         </div>

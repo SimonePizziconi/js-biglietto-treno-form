@@ -1,17 +1,17 @@
 // Scrivere un programma che chieda all’utente:
 // - Il numero di chilometri da percorrere - Età del passeggero - Il suo Nome
-let invio = document.querySelector(".genera");
+let buttonSend = document.getElementById("send");
 
-invio.addEventListener("click",
+buttonSend.addEventListener("click",
     function(){
-        let nameUser = document.querySelector(".user-name").value;
+        let nameUser = document.getElementById("user-name").value;
         document.getElementById("name-pass").innerHTML = nameUser;
         console.log(nameUser);
 
-        let ageUser = document.querySelector(".age-user").value;
+        let ageUser = document.getElementById("age-user").value;
         console.log(ageUser);
 
-        let kilometersUser = parseInt(document.querySelector(".kilometers").value);
+        let kilometersUser = parseInt(document.getElementById("kilometers").value);
         console.log(kilometersUser);
 
         // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole: 
@@ -43,7 +43,7 @@ invio.addEventListener("click",
         let finalPriceTicket = Math.round(priceTicket * 100) / 100;
         console.log(finalPriceTicket);
 
-        let messagePrice = document.querySelector("#price-ticket")
+        let messagePrice = document.getElementById("price-ticket")
         messagePrice.innerHTML = finalPriceTicket 
 
         // Quando "clicchiamo" genera si crea un biglietto virtuale
@@ -53,8 +53,8 @@ invio.addEventListener("click",
         console.log(fakeTicket);
 
         // Quando "clicchiamo" annulla si cancella il biglietto virtuale
-        let cancel = document.querySelector(".annulla")
-        cancel.addEventListener("click",
+        let buttonCancel = document.getElementById("cancel")
+        buttonCancel.addEventListener("click",
             function(){
                 fakeTicket.classList.remove("active")
             }
