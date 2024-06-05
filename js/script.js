@@ -1,6 +1,6 @@
 // Scrivere un programma che chieda all’utente:
 // - Il numero di chilometri da percorrere - Età del passeggero - Il suo Nome
-let buttonSend = document.getElementById("send");
+const buttonSend = document.getElementById("send");
 
 buttonSend.addEventListener("click",
     function(){
@@ -44,21 +44,34 @@ buttonSend.addEventListener("click",
         console.log(finalPriceTicket);
 
         let messagePrice = document.getElementById("price-ticket")
-        messagePrice.innerHTML = finalPriceTicket 
+        messagePrice.innerHTML = `${finalPriceTicket} €`;
 
         // Quando "clicchiamo" genera si crea un biglietto virtuale
 
         let fakeTicket = document.querySelector(".ticket");
-        fakeTicket.classList.add("active")
+        fakeTicket.classList.add("active");
         console.log(fakeTicket);
 
         // Quando "clicchiamo" annulla si cancella il biglietto virtuale
-        let buttonCancel = document.getElementById("cancel")
+        let buttonCancel = document.getElementById("cancel");
         buttonCancel.addEventListener("click",
             function(){
-                fakeTicket.classList.remove("active")
+                fakeTicket.classList.remove("active");
             }
         );
+
+        // Quando "clicchiamo" generiamo un numero casuale da 1 a 9 che corrisponde al numero del binario
+        let randomCarriage = document.getElementById("carriage-number");
+        const randomNumber = Math.floor(Math.random() * 9) + 1;
+        randomCarriage.innerHTML = randomNumber;
+        console.log(randomNumber);
+
+        // Quando "clicchiamo" generiamo un numero casuale da 1000 a 9999 che corrisponde al codice CP
+        let ticketCode = document.getElementById("ticket-code");
+        const randomCode =  Math.floor(Math.random() * 9000) + 1000;
+        ticketCode.innerHTML = randomCode;
+
+
 
 
 
