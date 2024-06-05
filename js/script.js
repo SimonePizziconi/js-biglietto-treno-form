@@ -47,7 +47,6 @@ buttonSend.addEventListener("click",
         messagePrice.innerHTML = `${finalPriceTicket} €`;
 
         // Quando "clicchiamo" genera si crea un biglietto virtuale
-
         let fakeTicket = document.querySelector(".ticket");
         fakeTicket.classList.add("active");
         console.log(fakeTicket);
@@ -56,7 +55,16 @@ buttonSend.addEventListener("click",
         let buttonCancel = document.getElementById("cancel");
         buttonCancel.addEventListener("click",
             function(){
+
                 fakeTicket.classList.remove("active");
+
+                // Rimuovere il value dentro l'input
+                nameUser = document.getElementById("user-name");
+                nameUser.value = '';
+
+                // Rimuovere value dentro l'input
+                kilometersUser = document.getElementById("kilometers");
+                kilometersUser.value = '';
             }
         );
 
@@ -70,11 +78,7 @@ buttonSend.addEventListener("click",
         let ticketCode = document.getElementById("ticket-code");
         const randomCode =  Math.floor(Math.random() * 9000) + 1000;
         ticketCode.innerHTML = randomCode;
-
-
-
-
-
+    
     }
 );
 
